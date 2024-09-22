@@ -9,3 +9,5 @@ places = ["Mexico", "Buenos Aires Argentina", "175 5th Avenue NYC"]
 for x in places:
     location = geolocator.geocode(x,timeout=10)
 # Imprimimos la informacion obtenida
+    print("lugar: "+x+", coordenadas: "+str(location.latitude)+","+str(location.longitude))
+    time.sleep(1)
