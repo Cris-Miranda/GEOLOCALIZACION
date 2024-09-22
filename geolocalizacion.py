@@ -1,13 +1,14 @@
-# Importamos el modulo time
-import time
 from geopy.geocoders import Nominatim
+
 # Generamos un objeto de la clase Nominatim
-geolocator = Nominatim()
+geolocator = Nominatim(user_agent="nombre-de-mi-app-geolocator")
+
 # Creamos una lista de lugares a buscar
 places = ["Mexico", "Buenos Aires Argentina", "175 5th Avenue NYC"]
-# Utilizamos la funcion geocode del objeto para obtener la longitud y latitud de cada lugar
-for x in places:
-    location = geolocator.geocode(x,timeout=10)
-# Imprimimos la informacion obtenida
-    print("lugar: "+x+", coordenadas: "+str(location.latitude)+","+str(location.longitude))
-    time.sleep(1)
+
+for place in places:
+    location = geolocator.geocode(place)
+    if location:
+        print(f"Lugar: {place}, Coordenadas: {location.latitude}, {location.longitude}")
+    else:
+        print(f"Lugar: {place}, No se encontraron coordenadas.")
