@@ -21,4 +21,6 @@ eq_map.drawcountries()
 # Dibujamos los meridianos y paralelos
 eq_map.fillcontinents(np.arange(0, 360, 30))
 eq_map.drawparallels(np.arange(-90, 90, 30))
-
+# Dibujamos cada uno de los puntos usando zip
+for lon, lat in zip(lon, lat):
+    
