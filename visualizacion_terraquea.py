@@ -27,5 +27,6 @@ for lon, lat in zip(lon, lat):
     x,y = eq_map(lon, lat)
 # Dibujamos un circulo color rojo 
     eq_map.plot(x, y, "r", markersize = 17, alpha = 0.8)
-    
-    
+# Obtenemos la imagen en formato png y alta resolcion
+plt.savefig("visualizacionDatos.png", bbox_inches = "tight", dpi = 100)    
+
