@@ -18,4 +18,7 @@ eq_map =Basemap(projection='robin',
 # Dibujamos las lineas costeras y los paises
 eq_map.drawcoastlines()
 eq_map.drawcountries()
+# Dibujamos los meridianos y paralelos
+eq_map.fillcontinents(np.arange(0, 360, 30))
+eq_map.drawparallels(np.arange(-90, 90, 30))
 
