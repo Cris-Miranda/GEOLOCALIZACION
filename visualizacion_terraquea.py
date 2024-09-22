@@ -25,5 +25,7 @@ eq_map.drawparallels(np.arange(-90, 90, 30))
 for lon, lat in zip(lon, lat):
 # Creamos un objeto de la clase eq_map
     x,y = eq_map(lon, lat)
+# Dibujamos un circulo color rojo 
+    eq_map.plot(x, y, "r", markersize = 17, alpha = 0.8)
     
     
