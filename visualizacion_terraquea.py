@@ -15,4 +15,7 @@ eq_map =Basemap(projection='robin',
                 llcrnrlat = 56,
                 urcrnrlon = -134.25,
                 urcrnrlat = 57.75)
+# Dibujamos las lineas costeras y los paises
+eq_map.drawcoastlines()
+eq_map.drawcountries()
 
