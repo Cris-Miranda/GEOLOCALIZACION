@@ -7,3 +7,5 @@ geolocator = Nominatim()
 places = ["Mexico", "Buenos Aires Argentina", "175 5th Avenue NYC"]
 # Utilizamos la funcion geocode del objeto para obtener la longitud y latitud de cada lugar
 for x in places:
+    location = geolocator.geocode(x,timeout=10)
+# Imprimimos la informacion obtenida
