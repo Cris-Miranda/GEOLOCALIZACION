@@ -9,7 +9,7 @@ plt.figure (figsize = (16, 12))
 #distribucion de lineascosteras
 eq_map =Basemap(projection='robin',
                 lon_0 = 0,
-                resolution = "h",
+                resolution = "i",
                 area_thresh = 1000.0,
                 llcrnrlon = -136.25,
                 llcrnrlat = 56,
@@ -18,6 +18,8 @@ eq_map =Basemap(projection='robin',
 # Dibujamos las lineas costeras y los paises
 eq_map.drawcoastlines()
 eq_map.drawcountries()
+# Dibujamos los continentes usando un color
+eq_map.fillcontinents(color="white", lake_color="aqua")
 # Dibujamos los meridianos y paralelos
 eq_map.fillcontinents(np.arange(0, 360, 30))
 eq_map.drawparallels(np.arange(-90, 90, 30))
